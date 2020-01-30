@@ -5,7 +5,8 @@ namespace CodeBlogFitness.BL.Model
     /// <summary>
     /// Пользователь.
     /// </summary>
-    class User
+    [Serializable]
+    public class User
     {
         #region Свойства
         /// <summary>
@@ -54,7 +55,7 @@ namespace CodeBlogFitness.BL.Model
                 throw new ArgumentNullException("Имя пользователя не может быть пустым или null.", nameof(name));
             }
 
-            if (Gender == null)
+            if (gender == null)
             {
                 throw new ArgumentNullException("Пол не может быть null.", nameof(gender));
             }
@@ -68,7 +69,7 @@ namespace CodeBlogFitness.BL.Model
 
             if (weight <= 0)
             {
-                throw new ArgumentNullException("Вес не может быть меньше либо равен нулю.", nameof(weight);
+                throw new ArgumentNullException("Вес не может быть меньше либо равен нулю.", nameof(weight));
             }
 
             if (height <= 0)
